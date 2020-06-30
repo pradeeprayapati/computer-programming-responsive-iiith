@@ -221,8 +221,8 @@ window.view = {
 		var yAxis;
 		this.getCanvas();
 		this.canvasContext.fillStyle = '#FF2400';
-		for ( yAxis = 0 ; yAxis <= 400 ; yAxis += 10 ) {
-			for ( xAxis = 0 ; xAxis <= 350 ; xAxis += 10 ) {
+		for ( yAxis = 0 ; yAxis <= 350 ; yAxis += 10 ) {
+			for ( xAxis = 0 ; xAxis <= 300 ; xAxis += 10 ) {
 				this.canvasContext.rect(xAxis, yAxis, 1, 1);
 			}
 		}

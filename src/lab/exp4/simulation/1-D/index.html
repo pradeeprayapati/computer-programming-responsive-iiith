@@ -4,6 +4,22 @@
 <link rel = 'stylesheet' type = 'text/css' href = 'array.css' />
 <!-- <link href = 'http://fonts.googleapis.com/css?family=Inconsolata' rel = 'stylesheet' type = 'text/css' > -->
 <script src = 'array.js' ></script>
+<script src = 'jquery-3.5.1.js' ></script>
+<script>
+	$(document).ready(function()
+{
+	$("#btnRandom").click(function()
+	{
+		$("#userInput").prop('readonly',true);
+	});
+	$("#btnManual").click(function()
+	{
+		$("#userInput").prop('readonly',false);
+	});
+});
+
+
+</script>
 <title>Computer-Programming</title>
 </head>
 
@@ -20,9 +36,9 @@
 			<button class = 'button okButton' id = 'btnOk' >OK</button>
 		</div><!-- end of arraySizeInputBlock -->
 		<div class = 'radioButtonDivision hide' id = 'inputButtonRadio' >
-            <div class = 'randomRadioButtonDivision' ><input type = 'radio' class = 'radiobutton' name = 'radio_group' id = 'btnRandom' ><label class = 'radioText' for = 'male' >Generate Random Values</label></div><!-- end of randomRadioButtonDivision -->
-            <div class = 'enterValueRadioButtonDivision' ><input type = 'radio' class = 'radiobutton' name = 'radio_group' id = 'btnManual'><label class = 'radioText' for = 'male' >Enter Values Manually</label></div><!-- end of enterValueRadioButtonDivision -->
-			<textarea class = 'arrayInputArea' name = 'firstname' placeholder = 'Enter values here in comma seperated format or seperated with space' id = 'userInput' ></textarea>
+            <div class = 'randomRadioButtonDivision' ><input type = 'radio' class = 'radiobutton' name = 'radio_group' id = 'btnRandom ' ><label class = 'radioText' for = 'male' >Generate Random Values</label></div><!-- end of randomRadioButtonDivision -->
+            <div class = 'enterValueRadioButtonDivision' ><input type = 'radio' class = 'radiobutton' name = 'radio_group' id = 'btnManual '><label class = 'radioText' for = 'male' >Enter Values Manually</label></div><!-- end of enterValueRadioButtonDivision -->
+			<textarea class = 'arrayInputArea' name = 'firstname' placeholder = 'Enter values here in comma seperated format or seperated with space' id = 'userInput' readonly ></textarea>
           	<div class = 'buttonHolder' ><button class = 'buttonDisable startButton' id = 'btnStart' disabled>Start</button><button class = 'buttonDisable nextButton' id = 'btnNext' disabled>Next</button></div><!-- end of buttonHolder -->
         </div><!-- end of radioButtonDivision -->
     </div><!-- end of inputDivisionBody -->
@@ -70,5 +86,6 @@
 		</div><!-- end of currentKeyPositionIndicator -->
 	</div><!-- end of resultDisplay -->
 </div><!-- end of outputDivision -->
+
 </body>
 </html>
